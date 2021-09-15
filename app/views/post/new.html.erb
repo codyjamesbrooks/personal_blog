@@ -1,0 +1,11 @@
+<h1>What's on your mind.</h1>
+
+<%= form_with model: @post, url: new_post_path do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title, placeholder: 'Title Here' %>
+
+  <%= form.label :content %>
+  <%= form.text_area :content, size: '70x5' %>
+
+  <%= form.submit 'Post Blog' %>
+<% end %>
